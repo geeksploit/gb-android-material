@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 else return getString(R.string.input_error_email_at_sign);
             }
         };
+
+        TextInputLayout inputLayoutName = findViewById(R.id.input_layout_name);
+        new InputValidator(checkMaxLength).attach(inputLayoutName);
     }
 
     private static final class InputValidator implements TextView.OnEditorActionListener {
