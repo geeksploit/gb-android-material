@@ -30,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
                     return null;
             }
         };
+
+        InputValidator.InputCondition checkEmail = new InputValidator.InputCondition() {
+            @Override
+            public String evaluate(String input) {
+                if (input.contains("@")) return null;
+                else return getString(R.string.input_error_email_at_sign);
+            }
+        };
     }
 
     private static final class InputValidator implements TextView.OnEditorActionListener {
