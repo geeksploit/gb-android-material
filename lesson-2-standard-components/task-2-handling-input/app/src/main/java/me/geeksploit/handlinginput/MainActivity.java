@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         private List<InputCondition> conditions = new ArrayList<>();
         private Map<TextView, TextInputLayout> textInputLayouts = new HashMap<>();
+
+        InputValidator(InputCondition... conditions) {
+            this.conditions.addAll(Arrays.asList(conditions));
+        }
 
         @Override
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
