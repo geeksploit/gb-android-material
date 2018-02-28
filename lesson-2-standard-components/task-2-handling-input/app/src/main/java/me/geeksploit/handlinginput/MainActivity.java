@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             for (InputCondition c : conditions)
                 buildMessage(errorMessage, c.evaluate(input));
 
+            textInputLayouts.get(v).setError(errorMessage.toString().trim());
+
             return false;
         }
 
