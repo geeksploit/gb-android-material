@@ -19,6 +19,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        InputValidator.InputCondition checkMaxLength = new InputValidator.InputCondition() {
+            @Override
+            public String evaluate(String input) {
+                final int MAX_LENGTH = 10;
+                if (input.length() > MAX_LENGTH)
+                    return getString(R.string.input_error_length_long, MAX_LENGTH);
+                else
+                    return null;
+            }
+        };
     }
 
     private static final class InputValidator implements TextView.OnEditorActionListener {

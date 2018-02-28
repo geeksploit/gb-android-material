@@ -3,4 +3,6 @@
     <string name="input_hint_name">Name</string>
     <string name="input_hint_email">E-mail</string>
     <string name="input_hint_combined">Complex condition</string>
+
+    <string name="input_error_length_long">must be less than %d characters</string>
 </resources>
