@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
             String input = v.getText().toString();
 
+            StringBuilder errorMessage = new StringBuilder();
+            for (InputCondition c : conditions)
+                buildMessage(errorMessage, c.evaluate(input));
+
             return false;
         }
 
