@@ -12,4 +12,8 @@
         <item name="colorControlActivated">@android:color/holo_purple</item>
     </style>
 
+    <style name="ColorStateList">
+        <item name="android:textColor">@drawable/color_state_list</item>
+    </style>
+
 </resources>
