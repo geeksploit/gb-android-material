@@ -36,4 +36,19 @@
             android:theme="@style/EditTextStyle" />
     </android.support.design.widget.TextInputLayout>
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintTextAppearance="@style/EditTextHintStyle"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutName1">
+
+        <!-- TODO: а тут Color State List используется через стиль -->
+        <EditText
+            style="@style/ColorStateList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_text_hint_enter_name"
+            android:theme="@style/EditTextStyle" />
+    </android.support.design.widget.TextInputLayout>
+
 </android.support.constraint.ConstraintLayout>
