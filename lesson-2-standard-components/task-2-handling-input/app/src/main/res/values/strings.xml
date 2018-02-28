@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Handling Input</string>
+    <string name="input_hint_name">Name</string>
 </resources>
