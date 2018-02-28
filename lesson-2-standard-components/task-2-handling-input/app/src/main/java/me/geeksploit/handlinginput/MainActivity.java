@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         InputValidator(InputCondition... conditions) {
             this.conditions.addAll(Arrays.asList(conditions));
+        }
+
+        void attach(TextInputLayout layout) {
+            EditText editText = layout.getEditText();
+            if (editText != null) {
+                textInputLayouts.put(editText, layout);
+                editText.setOnEditorActionListener(this);
+            }
         }
 
         @Override
