@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TextInputLayout</string>
+    <string name="edit_text_hint_enter_name">Введите имя</string>
+</resources>
