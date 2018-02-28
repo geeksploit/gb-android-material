@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextInputLayout inputLayoutName = findViewById(R.id.input_layout_name);
         new InputValidator(checkMaxLength).attach(inputLayoutName);
+
+        TextInputLayout inputLayoutEmail = findViewById(R.id.input_layout_email);
+        new InputValidator(checkEmail).attach(inputLayoutEmail);
     }
 
     private static final class InputValidator implements TextView.OnEditorActionListener {
