@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final class InputValidator implements TextView.OnEditorActionListener {
 
+        private static final String ERROR_MESSAGES_DELIMITER = " / ";
         private List<InputCondition> conditions = new ArrayList<>();
         private Map<TextView, TextInputLayout> textInputLayouts = new HashMap<>();
 
@@ -41,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
             return false;
+        }
+
+        private void buildMessage(StringBuilder sb, String messagePart) {
+            if (messagePart == null) return;
+            if (sb.length() > 0) sb.append(ERROR_MESSAGES_DELIMITER);
+
+            sb.append(messagePart);
         }
 
         interface InputCondition {
