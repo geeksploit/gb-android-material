@@ -24,10 +24,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public String evaluate(String input) {
                 final int MAX_LENGTH = 10;
-                if (input.length() > MAX_LENGTH)
-                    return getString(R.string.input_error_length_long, MAX_LENGTH);
-                else
-                    return null;
+                if (input.length() <= MAX_LENGTH) return null;
+                else return getString(R.string.input_error_length_long, MAX_LENGTH);
             }
         };
 
