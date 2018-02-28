@@ -19,5 +19,9 @@ public class MainActivity extends AppCompatActivity {
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
             return false;
         }
+
+        interface InputCondition {
+            String evaluate(String input);
+        }
     }
 }
