@@ -1,12 +1,15 @@
 package me.geeksploit.handlinginput;
 
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private static final class InputValidator implements TextView.OnEditorActionListener {
 
         private List<InputCondition> conditions = new ArrayList<>();
+        private Map<TextView, TextInputLayout> textInputLayouts = new HashMap<>();
 
         @Override
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
