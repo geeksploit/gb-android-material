@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private static final class InputValidator implements TextView.OnEditorActionListener {
+
+        private List<InputCondition> conditions = new ArrayList<>();
 
         @Override
         public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
