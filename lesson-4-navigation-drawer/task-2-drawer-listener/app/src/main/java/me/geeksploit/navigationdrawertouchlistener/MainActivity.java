@@ -85,16 +85,22 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         switch (item.getItemId()) {
             case R.id.nav_camera:
+                mTextMain.setText(item.getTitle());
                 break;
             case R.id.nav_gallery:
+                mTextMain.setText(item.getTitle());
                 break;
             case R.id.nav_slideshow:
+                mTextMain.setText(item.getTitle());
                 break;
             case R.id.nav_manage:
+                mTextMain.setText(item.getTitle());
                 break;
             case R.id.nav_share:
+                mTextMain.setText(item.getTitle());
                 break;
             case R.id.nav_send:
+                mTextMain.setText(item.getTitle());
                 break;
             default:
                 throw new UnsupportedOperationException();
