@@ -3,6 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+    <item android:title="Play With Colors">
+        <menu>
+            <item
+                android:id="@+id/nav_color_icons"
+                android:icon="@drawable/ic_menu_colors_pick"
+                android:title="Random Icon Colors" />
+            <item
+                android:id="@+id/nav_color_text"
+                android:icon="@drawable/ic_menu_colors_pick"
+                android:title="Random Text Colors" />
+            <item
+                android:id="@+id/nav_color_reset"
+                android:icon="@drawable/ic_menu_colors_reset"
+                android:title="Reset Colors" />
+        </menu>
+    </item>
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"
