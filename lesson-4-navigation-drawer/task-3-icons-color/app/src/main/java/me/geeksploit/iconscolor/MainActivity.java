@@ -1,6 +1,7 @@
 package me.geeksploit.iconscolor;
 
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -107,5 +108,13 @@ public class MainActivity extends AppCompatActivity
 //        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 //        drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private int makeRandomColor() {
+        return Color.argb(0xFF,
+                (int) (Math.random() * 0xFF),
+                (int) (Math.random() * 0xFF),
+                (int) (Math.random() * 0xFF)
+        );
     }
 }
