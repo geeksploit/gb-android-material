@@ -96,6 +96,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_color_icons:
                 mNavigationView.setItemIconTintList(makeRandomColorStateList());
                 break;
+            case R.id.nav_color_text:
+                mNavigationView.setItemTextColor(makeRandomColorStateList());
+                break;
             default:
                 Log.e(TAG, "Unknown MenuItem: " + item);
         }
