@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.nav_color_icons:
                 mNavigationView.setItemIconTintList(makeRandomColorStateList());
                 break;
