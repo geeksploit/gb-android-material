@@ -110,6 +110,24 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    private ColorStateList makeRandomColorStateList() {
+        int[][] states = new int[][]{
+                new int[]{android.R.attr.state_pressed},
+                new int[]{android.R.attr.state_checked},
+                new int[]{android.R.attr.state_enabled},
+                new int[]{-android.R.attr.state_pressed},
+        };
+
+        int[] colors = new int[]{
+                makeRandomColor(),
+                makeRandomColor(),
+                makeRandomColor(),
+                makeRandomColor()
+        };
+
+        return new ColorStateList(states, colors);
+    }
+
     private int makeRandomColor() {
         return Color.argb(0xFF,
                 (int) (Math.random() * 0xFF),
