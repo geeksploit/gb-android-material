@@ -1,5 +1,6 @@
 package me.geeksploit.iconscolor;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private NavigationView mNavigationView;
+    private ColorStateList mIconColorStateList;
+    private ColorStateList mTextColorStateList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,9 @@ public class MainActivity extends AppCompatActivity
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
+
+        mIconColorStateList = mNavigationView.getItemIconTintList();
+        mTextColorStateList = mNavigationView.getItemTextColor();
 
         drawer.openDrawer(mNavigationView);
     }
