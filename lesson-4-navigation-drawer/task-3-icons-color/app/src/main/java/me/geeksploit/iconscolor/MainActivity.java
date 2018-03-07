@@ -93,6 +93,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         switch(item.getItemId()) {
+            case R.id.nav_color_icons:
+                mNavigationView.setItemIconTintList(makeRandomColorStateList());
+                break;
             default:
                 Log.e(TAG, "Unknown MenuItem: " + item);
         }
